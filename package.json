@@ -1,0 +1,56 @@
+{
+  "name": "notion-electron-app",
+  "version": "1.0.0",
+  "description": "notion that can be installed on any os.",
+  "repository": "r-ush/notion-electron-app",
+  "author": {
+    "name": "Aarush Bhat",
+    "email": "aarush.bhatt@gmail.com",
+    "url": "https://r-ush.co/"
+  },
+  "scripts": {
+    "postinstall": "electron-builder install-app-deps",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --linux",
+    "win": "electron-builder --windows"
+  },
+  "dependencies": {
+    "electron-reloader": "^1.2.1"
+  },
+  "devDependencies": {
+    "electron": ">=13.1.5",
+    "electron-builder": "^22.11.7",
+    "eslint": "^7.30.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "build": {
+    "appId": "com.company.AppName",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "darkModeSupport": true
+    },
+    "dmg": {
+      "iconSize": 160,
+      "contents": [
+        {
+          "x": 180,
+          "y": 170
+        },
+        {
+          "x": 480,
+          "y": 170,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Development"
+    }
+  }
+}
