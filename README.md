@@ -1,4 +1,4 @@
-# Whatsapp Electron App
+# Notion Electron App
 
 Install the .deb package from the [releases](https://github.com/r-ush/notion-electron-app/releases) and you are gtg!
 
